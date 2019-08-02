@@ -1,13 +1,9 @@
 # Trick Implementations
 
 
-
-### Biconnected Decomposition
+### Header
 
 ```c++
-#include <bits/stdc++.h>
-using namespace std;
-
 #define pb push_back
 #define mk make_pair
 #define fi first
@@ -18,6 +14,14 @@ typedef long long ll;
 typedef pair<int,int> ii;
 typedef vector< pair<int,int> > vii;
 const int INF = 0x3f3f3f3f;
+```
+
+
+### Biconnected Decomposition
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
 
 const int T = 5e4 + 10;
 const int N = 1e5;
@@ -163,26 +167,9 @@ int main() {
 
 
 
-
-
 ### moHilbert
 
 ```c++
-#include <bits/stdc++.h>
-using namespace std;
-
-#define pb push_back
-#define mk make_pair
-#define fi first
-#define se second
-#define eb emplace_back
-
-typedef long long ll;
-typedef unsigned long long ull;
-typedef pair<int,int> ii;
-typedef vector< pair<int,int> > vii;
-const int INF = 0x3f3f3f3f;
-
 const int pw = 21; 
 const int T = 1e5 + 1000;
 const int N = sqrt(T);
@@ -292,18 +279,6 @@ int main() {
 ### Dinic MinCut
 
 ```c++
-#include <bits/stdc++.h>
-using namespace std;
- 
-#define pb push_back
-#define eb emplace_back
-#define mk make_pair
-#define fi first
-#define se second
-#define cc(x)	cout << #x << " = " << x << endl
-#define ok		cout << "ok" << endl
-#define endl '\n'
- 
 typedef long long ll;
 typedef pair<int,int> ii;
 const int INF = 0x3f3f3f3f;
@@ -440,20 +415,7 @@ int main() {
 ### Mat exp
 
 ```c++
-#include <bits/stdc++.h>
-using namespace std;
-
-#define pb push_back
-#define mk make_pair
-#define fi first
-#define se second
-#define eb emplace_back
-
-typedef long long ll;
-typedef pair<int,int> ii;
-typedef vector< pair<int,int> > vii;
-const int INF = 0x3f3f3f3f;
-const int MOD = 1e9 + 9;
+onst int MOD = 1e9 + 9;
 const int n = 3;
 
 typedef vector< vector<ll> > mat;
