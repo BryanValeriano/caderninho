@@ -12,7 +12,6 @@ typedef pair<int,int> ii;
 typedef vector< pair<int,int> > vii;
 const int INF = 0x3f3f3f3f;
 
-const int T = 9e4 + 5;
 vector<int> c(T), p(T), cn(T), pn(T), cnt(T);
 vector<int> lcp(T), tam(T), rk(T);
 string s;
@@ -100,12 +99,6 @@ string search(int x) {
     return ans;
 }
 
-void buildSuffix() {
-    s += "$";
-    shift();
-    p.erase(p.begin());
-    s.pop_back();
-}
 
 int main() {
     ios_base::sync_with_stdio(false);

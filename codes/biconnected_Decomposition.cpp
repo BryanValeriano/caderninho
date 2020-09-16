@@ -15,7 +15,7 @@ const int INF = 0x3f3f3f3f;
 const int T = 5e4 + 10;
 const int N = 1e5;
 
-struct edge { 
+struct edge {
     int i,j,id;
 
     int dif(int x) {
@@ -38,14 +38,14 @@ void init() {
     for(int i = 0; i < T; i++) {
         isCut[i] = vis[i] = false;
         tin[i] = low[i] = 0;
-        g[i].clear(); 
+        g[i].clear();
         comps[i].clear();
     }
     t = 0;
 }
 
 void makeComp(int at) {
-    set<int> cuts; 
+    set<int> cuts;
     set<int> tam;
     while(stk[stk[0]] != at) {
         int u = e[stk[stk[0]]].i;
@@ -82,13 +82,13 @@ int dfs(int u, int p, int id) {
     bool hasC = false;
     for(int x : g[u]) {
         if(e[x].id == id) continue;
-        
-        if(dfs(e[x].dif(u), u, e[x].id) < 0) { 
+
+        if(dfs(e[x].dif(u), u, e[x].id) < 0) {
 
             low[u] = min(low[u], low[e[x].dif(u)]);
 
-            if(u != p ? low[e[x].dif(u)] >= tin[u] : hasC) { 
-                isCut[u] = true; 
+            if(u != p ? low[e[x].dif(u)] >= tin[u] : hasC) {
+                isCut[u] = true;
                 makeComp(e[x].id);
             }
         }
@@ -102,8 +102,8 @@ int dfs(int u, int p, int id) {
 
 ll bin[N][3];
 
-ll choose() { 
-   for(int i = 0; i < N; i++) bin[i][0] = 1; 
+ll choose() {
+   for(int i = 0; i < N; i++) bin[i][0] = 1;
    for(int j = 0; j <= 2; j++) bin[j][j] = 1;
 
    for(int i = 1; i < N; i++)
@@ -142,10 +142,10 @@ int main() {
                 }
             }
         }
-        if(ans == 0) { ans = 2; prod = bin[n][2]; }  
+        if(ans == 0) { ans = 2; prod = bin[n][2]; }
         cout << "Case " << ++z << ": " << ans << " " << prod << endl;
         stk[0] = 0;
-        cin >> m; 
+        cin >> m;
     }
     return 0;
 }
